@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp Login</title>
+    <style>
+        body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/1903747/pexels-photo-1903747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  text-decoration: none;
+  
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+a button {
+  width: 150px;
+}
+      </style>
+    <h2>Login</h2> 
+</head>
+<body>
+    <form onsubmit="login(event)">
+    <label for="email">Email id</label>
+    <input type="text" name="email" id="email" required/><br>
+    <label for="password">Password</label>
+    <input type="text" name="password" id="password" required/><br>
+    <button>Login</button>
+    </form>
+    <a href ='./signup.html'><button>New User Signup</button></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.4.1/axios.min.js"></script>
+    
+    <script src="./login.js"></script> 
+</body>
+</html>

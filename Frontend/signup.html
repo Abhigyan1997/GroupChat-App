@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign up</title>
+    <style>
+        /* Center the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Style the input fields */
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password] {
+  width: 50%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the "Existing User" button */
+button:not([type=submit]) {
+  background-color: #008CBA;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Change the color of the "Existing User" button on hover */
+button:not([type=submit]):hover {
+  background-color: #006080;
+}
+
+/* Add some style to the form header */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Add some style to the form labels */
+label {
+  font-weight: bold;
+}
+
+/* Style the form error messages */
+form span {
+  color: red;
+  margin-bottom: 10px;
+}
+
+button:not([type=submit]) {
+  display: block;
+  margin: 0 auto;
+}
+body {
+  background-image: url(https://images.pexels.com/photos/1903747/pexels-photo-1903747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+}
+
+      </style>
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <form  onsubmit="signup(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Phone:</label>
+      <input type="number" id="phone" name="phone" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Sign up</button>
+    </form>
+    <button onclick="location.href='./login.html'">Existing User-->Login</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>

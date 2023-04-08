@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Window</title>
+    <style>
+       /* Chat Window styles */
+#chat-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+#user-list {
+  margin-bottom: 20px;
+}
+
+#chat-messages {
+  height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+#chat-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chat-message {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+#chat-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+}
+
+#chat-form button:hover {
+  background-color: #3e8e41;
+}
+
+      </style>
+  </head>
+  <body>
+    <div id="chat-window">
+      <div id="user-list">
+        <!-- Display list of users here -->
+      </div>
+      <div id="chat-messages">
+        <!-- Display chat messages here -->
+      </div>
+      <form id="chat-form">
+        <input type="text" id="chat-message" placeholder="Type your message here">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div id="remove-group-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <form id="remove-member-form">
+            <label for="members">Remove Members</label>
+            <input type="text" id="members" name="members"><br>
+            <button type="submit">Remove</button>
+            </form>
+        </div>
+      </div>
+  
+      <div id="admin-group-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <form id="admin-member-form">
+            <label for="members">Make admin of the group</label>
+            <input type="text" id="memberstomakeadmin" name="members"><br>
+            <button type="submit">Admin</button>
+            </form>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.4.1/axios.min.js"></script>
+    <script src="groupChat.js"></script>
+  </body>
+</html>
